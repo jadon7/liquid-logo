@@ -232,7 +232,7 @@ export function Hero({ imageId }: HeroProps) {
 
       <div className="grid grid-cols-[auto_160px_100px] items-center gap-x-24 gap-y-12 rounded-8 p-16 outline outline-white/20">
         <div>
-          <label className="pr-16 text-nowrap">Background</label>
+          <label className="pr-16 text-nowrap">背景</label>
         </div>
         <div className="col-span-2 flex h-40 items-center gap-9">
           <button
@@ -240,21 +240,21 @@ export function Hero({ imageId }: HeroProps) {
             style={{ background: 'linear-gradient(to bottom, #eee, #b8b8b8)' }}
             onClick={() => setState({ ...state, background: 'metal' })}
           >
-            Metal
+            金属
           </button>
 
           <button
             className="size-28 cursor-pointer rounded-full bg-white text-[0px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
             onClick={() => setState({ ...state, background: 'white' })}
           >
-            White
+            白色
           </button>
 
           <button
             className="size-28 cursor-pointer rounded-full bg-black text-[0px] outline outline-white/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
             onClick={() => setState({ ...state, background: 'black' })}
           >
-            Black
+            黑色
           </button>
 
           <label
@@ -288,7 +288,7 @@ export function Hero({ imageId }: HeroProps) {
         </div>
 
         <Control
-          label="Refraction"
+          label="折射率"
           value={state.refraction}
           min={params.refraction.min}
           max={params.refraction.max}
@@ -296,7 +296,7 @@ export function Hero({ imageId }: HeroProps) {
           onValueChange={(value) => setState((state) => ({ ...state, refraction: value }))}
         />
         <Control
-          label="Edge"
+          label="边缘"
           value={state.edge}
           min={params.edge.min}
           max={params.edge.max}
@@ -304,7 +304,7 @@ export function Hero({ imageId }: HeroProps) {
           onValueChange={(value) => setState((state) => ({ ...state, edge: value }))}
         />
         <Control
-          label="Pattern Blur"
+          label="图案模糊"
           value={state.patternBlur}
           min={params.patternBlur.min}
           max={params.patternBlur.max}
@@ -312,7 +312,7 @@ export function Hero({ imageId }: HeroProps) {
           onValueChange={(value) => setState((state) => ({ ...state, patternBlur: value }))}
         />
         <Control
-          label="Liquify"
+          label="液化效果"
           value={state.liquid}
           min={params.liquid.min}
           max={params.liquid.max}
@@ -320,7 +320,7 @@ export function Hero({ imageId }: HeroProps) {
           onValueChange={(value) => setState((state) => ({ ...state, liquid: value }))}
         />
         <Control
-          label="Speed"
+          label="速度"
           value={state.speed}
           min={params.speed.min}
           max={params.speed.max}
@@ -328,7 +328,7 @@ export function Hero({ imageId }: HeroProps) {
           onValueChange={(value) => setState((state) => ({ ...state, speed: value }))}
         />
         <Control
-          label="Pattern Scale"
+          label="图案比例"
           value={state.patternScale}
           min={params.patternScale.min}
           max={params.patternScale.max}
@@ -343,11 +343,10 @@ export function Hero({ imageId }: HeroProps) {
             className="mb-16 flex h-40 cursor-pointer items-center justify-center rounded-4 bg-button font-medium select-none"
           >
             <input type="file" accept="image/*,.svg" onChange={handleFileInput} id="file-input" className="hidden" />
-            Upload image
+            上传图片
           </label>
           <p className="w-fill text-sm text-white/80">
-            Tips: transparent or white background is required. Shapes work better than words. Use an SVG or a
-            high-resolution image.
+            提示：需要透明或白色背景。形状比文字效果更好。请使用 SVG 或高分辨率图片。
           </p>
         </div>
       </div>

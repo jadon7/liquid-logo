@@ -13,28 +13,14 @@ export default async function Page({ params }: PageProps) {
   const { id } = await params;
 
   return (
-    <div className="flex min-h-dvh flex-col items-center justify-between">
-      <div className="relative mb-48 flex h-72 w-full items-center justify-between px-20 md:px-32">
-        <a href="https://paper.design">
-          <PaperLogo />
-        </a>
-
-        <span className="pt-8 md:absolute md:left-1/2 md:-translate-x-1/2">Liquid Metal Shader</span>
-
-        <span className="sm:gap-28 flex gap-24 pt-8">
-          <NextLink className="hover:underline" href="https://x.com/paper">
-            @paper
-          </NextLink>
-        </span>
-      </div>
-
-      <div className="pb-80">
+    <div className="flex min-h-dvh flex-col items-center justify-center gap-32">
+      <div>
         <Suspense>
           <Hero imageId={id} />
         </Suspense>
       </div>
 
-      <div className="mb-16 flex w-full gap-24 overflow-scroll p-16 text-sm select-none *:first:ml-auto *:last:mr-auto">
+      <div className="flex w-full gap-24 overflow-scroll p-16 text-sm select-none *:first:ml-auto *:last:mr-auto">
         {logos.map((group, i) => (
           <Fragment key={i}>
             <div key={i} className="flex">
@@ -95,11 +81,6 @@ const logos = [
       href: '/share/01JMFQS93Q6R2VRQ62HTAA2AKG',
       src: '/logos/discord.svg',
     },
-    // {
-    //   name: 'Remix',
-    //   href: '/share/01JMFQ533G3TVC21E96RSAG4KF',
-    //   src: '/logos/remix.svg',
-    // },
     {
       name: 'Cloudflare',
       href: '/share/01JMFQZ01HE5Q0TR647QV5W6YW',
